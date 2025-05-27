@@ -182,9 +182,9 @@ const App = () => {
 
 {showLoginForm && (
   <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-    <div className="relative bg-white w-full max-w-md p-6 rounded-lg shadow-lg">
+    <div className="relative bg-white w-full max-w-md p-10 rounded-lg shadow-lg">
       <button 
-        className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl"
+        className="absolute top-4 right-6 text-gray-500 hover:text-gray-700 text-2xl"
         onClick={() => setShowLoginForm(false)}
       >
         &times;
@@ -193,14 +193,14 @@ const App = () => {
       <div className="hero-content">
         <h2 className="text-3xl font-bold text-indigo-800 mb-2">Iniciar Sesión</h2>
         <p className="text-lg text-gray-600 mb-4">
-          Ingresa tus credenciales para acceder a <span className="highlight">SmarToDo</span>.
+          Ingresa tus credenciales para acceder a <span className="text-indigo-800"><strong>SmarToDo</strong></span>.
         </p>
         <div className="mb-4">
         </div>
         
         <form onSubmit={handleLoginSubmit}>
           <div className="mb-3">
-            <label htmlFor="email" className="block text-base font-medium text-gray-700">
+            <label htmlFor="email" className="block font-medium text-gray-700">
               Correo electrónico
             </label>
             <input
@@ -211,7 +211,7 @@ const App = () => {
               onChange={handleInputChange}
               placeholder="correo@poligran.edu.co"
               required
-              className="mt-1 block w-full p-2 border border-gray-300 rounded focus:ring-indigo-500 focus:border-indigo-500"
+              className="mt-1 block w-full p-2 border text-stone-700 border-gray-300 rounded"
             />
           </div>
           <div className="mb-4">
@@ -226,7 +226,7 @@ const App = () => {
               onChange={handleInputChange}
               placeholder="••••••••"
               required
-              className="mt-1 block w-full p-2 border border-gray-300 rounded focus:ring-indigo-500 focus:border-indigo-500"
+              className="mt-1 text-stone-700 block w-full p-2 border border-gray-300 rounded focus:ring-indigo-500 focus:border-indigo-500"
             />
           </div>
           <button type="submit" className="primary-btn w-full py-2 mt-3 mb-5">
